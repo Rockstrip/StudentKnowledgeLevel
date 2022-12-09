@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{A044803E-6E6F-40C2-B39B-CC86E86B8B38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "View", "View\View.csproj", "{EB7C7DA1-9FB8-4AAF-A9BB-AEE1EE41C9FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelCache", "ModelCache\ModelCache.csproj", "{DE456601-C33D-43E1-9228-02FC688D2F4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A044803E-6E6F-40C2-B39B-CC86E86B8B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A044803E-6E6F-40C2-B39B-CC86E86B8B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A044803E-6E6F-40C2-B39B-CC86E86B8B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A044803E-6E6F-40C2-B39B-CC86E86B8B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB7C7DA1-9FB8-4AAF-A9BB-AEE1EE41C9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB7C7DA1-9FB8-4AAF-A9BB-AEE1EE41C9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB7C7DA1-9FB8-4AAF-A9BB-AEE1EE41C9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB7C7DA1-9FB8-4AAF-A9BB-AEE1EE41C9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE456601-C33D-43E1-9228-02FC688D2F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE456601-C33D-43E1-9228-02FC688D2F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE456601-C33D-43E1-9228-02FC688D2F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE456601-C33D-43E1-9228-02FC688D2F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B45A9F8-A62C-4625-A0A7-AC32E141BDC2}
+	EndGlobalSection
+EndGlobal

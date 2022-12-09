@@ -1,0 +1,185 @@
+﻿<ui:UiWindow
+    x:Class="FuzzyAlzheimerUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    mc:Ignorable="d"
+    ExtendsContentIntoTitleBar="True"
+    WindowBackdropType="Mica"
+    Height="600" Width="900"
+    Title="Student Knowledge">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            Title="Student Knowledge"
+            Grid.Row="0"
+            Icon="pack://application:,,,/Assets/applicationIcon-256.png">
+            <ui:TitleBar.Header>
+                <StackPanel
+                    Margin="0,0,12,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+                    <ui:Button
+                        x:Name="ThemeButton"
+                        Appearance="Secondary"
+                        Content="Тема"
+                        Icon="DarkTheme20"
+                        Click="ThemeButton_Click" />
+                </StackPanel>
+            </ui:TitleBar.Header>
+        </ui:TitleBar>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border
+                Grid.Column="0"
+                Background="{DynamicResource ControlFillColorDefaultBrush}"
+                CornerRadius="8,8,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Margin="5,5,5,25"
+                        TextWrapping="WrapWithOverflow"
+                        Text=" Для визначення рівня знань студента&#10;
+введіть його балл (0-100) з кожної категорії&#10;"/>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="15,0,0,0"
+                            Text="Програмне забезпечення"
+                            VerticalAlignment="Center"/>
+
+                        <ui:TextBox
+                            x:Name="ML_Value"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,5,7,5"
+                            PlaceholderText="0-100"
+                            VerticalAlignment="Center"
+                            PreviewTextInput="PreviewTextInputEvent"/>
+
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="15,0,0,0"
+                            Text="Презентація"
+                            VerticalAlignment="Center"/>
+
+                        <ui:TextBox
+                            x:Name="CS1_Value"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="0,5,7,5"
+                            PlaceholderText="0-100"
+                            VerticalAlignment="Center"
+                            PreviewTextInput="PreviewTextInputEvent"/>
+
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="15,0,0,0"
+                            Text="Оформлення"
+                            VerticalAlignment="Center"/>
+
+                        <ui:TextBox
+                            x:Name="CS2_Value"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="0,5,7,5"
+                            PlaceholderText="0-100"
+                            VerticalAlignment="Center"
+                            PreviewTextInput="PreviewTextInputEvent"/>
+                    </Grid>
+
+                    <ui:Button
+                        x:Name="AcceptButton"
+                        Grid.Row="2"
+                        Appearance="Primary"
+                        HorizontalAlignment="Right"
+                        Content="Calculate"
+                        Click="AcceptButton_Click"/>
+
+                    <Border
+                        Grid.Row="3"
+                        Margin="0,5,0,0"
+                        Background="{DynamicResource ControlFillColorDefaultBrush}"
+                        CornerRadius="8,8,0,0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="15,0,5,0"
+                                Text="Чітке значення результату"
+                                VerticalAlignment="Center"/>
+
+                            <TextBox
+                                x:Name="Crisp_Value"
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="5,5,7,5"
+                                VerticalAlignment="Center"
+                                PreviewTextInput="PreviewTextInputEvent"
+                                IsReadOnly="True"/>
+
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Margin="15,0,5,0"
+                                Text="Рівень знань студента"
+                                VerticalAlignment="Center"/>
+
+                            <TextBox
+                                x:Name="Word_Value"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="5,5,7,5"
+                                VerticalAlignment="Center"
+                                PreviewTextInput="PreviewTextInputEvent"
+                                IsReadOnly="True"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ui:UiWindow>
